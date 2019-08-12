@@ -2,7 +2,7 @@ package = "kong-cookie2header"
 version = "dev-1"
 source = {
     url = "git://github.com/skylineos/kong-cookie2header",
-    tag = "master",
+    branch = "master",
     dir = "kong-cookie2header"
 }
 description = {
