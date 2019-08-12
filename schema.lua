@@ -1,0 +1,26 @@
+local typedefs = require "kong.db.schema.typedefs"
+
+return {
+  name = "cookie2header",
+  fields = {
+    {
+      config = {
+        type = "record",
+        fields = {
+          {
+            logout_path = {
+              type = "string",
+              required = true,
+            },
+          },
+          {
+            cookie_name = {
+              type = "string",
+              required = true,
+            },
+          },
+        },
+      },
+    }
+  },
+}
