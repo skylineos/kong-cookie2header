@@ -10,7 +10,7 @@ return {
           {
             logout_path = {
               type = "string",
-              required = true,
+              required = false,
             },
           },
           {

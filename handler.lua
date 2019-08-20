@@ -12,14 +12,12 @@ function Cookie2HeaderHandler:rewrite(config)
     local ck = cookie:new()
     local hostName, err = ck:get(config.cookie_name)
 
-    -- TODO: double check
-    -- ngx.var.upstream_uri = ""
-
     if hostName then
         ngx.req.set_header("Host", hostName)
     end
     
-    local isLogout = not (string.find(ngx.var.uri, config.logout_path) == nil)
+    -- todo: possibly deprecated (or repurpose to ignore paths)
+    local isLogout = config.logout_path != nil and not (string.find(ngx.var.uri, config.logout_path) == nil)
     if isLogout then
         ngx.req.clear_header("Host")
     end
