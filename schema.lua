@@ -19,6 +19,12 @@ return {
               required = true,
             },
           },
+          {
+            header_key = {
+              type = "string",
+              required = true,
+            }
+          },
         },
       },
     }
